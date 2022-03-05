@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.border.Border;
+import javax.swing.JComboBox;
 
 public class test {
 
@@ -29,6 +30,15 @@ public class test {
         JLabel P1Label = new JLabel("P1");
         P1Label.setText("P1");
         P1Label.setBounds(15,25,100,50);
+
+        String chessPieces [] = {"King", "Queen", "Bishop", "Knight", "Rook", "Pawn"};
+        Object pieceMoves [] = {};
+        JComboBox P1PieceDropdown = new JComboBox(chessPieces);
+        JComboBox P1MoveToDropdown = new JComboBox(pieceMoves);
+        P1PieceDropdown.setBounds(75,75,100,30);
+        P1MoveToDropdown.setBounds(75,150,100,30);
+        jFrame.add(P1PieceDropdown);
+        jFrame.add(P1MoveToDropdown);
         
         JLabel P2Label = new JLabel("P2");
         P2Label.setText("P2");
@@ -43,7 +53,7 @@ public class test {
         JButton Start = new JButton("Start");
         Edit.setBounds(395,500, 80, 50);
         Start.setBounds(495,500, 80, 50);
-
+        //x, y, h, w 
         JButton p1CM = new JButton("CM");
         JButton p2CM = new JButton("CM");
         p1CM.setBounds(75, 315, 100, 50);
@@ -58,6 +68,15 @@ public class test {
         jFrame.add(p1Check);
         jFrame.add(p2Check);
         jFrame.add(label);
+
+        
+        JComboBox P2PeiceDropDown = new JComboBox(chessPieces);
+        JComboBox P2MoveToDropDown = new JComboBox(pieceMoves);
+        P2PeiceDropDown.setBounds(800, 75, 100, 30);
+        P2MoveToDropDown.setBounds(800, 150, 100, 30);
+        jFrame.add(P2PeiceDropDown);
+        jFrame.add(P2MoveToDropDown);
+
         jFrame.setVisible(true);
     }
 
