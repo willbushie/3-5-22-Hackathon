@@ -13,7 +13,7 @@ public class chessgame {
 
     // show the chess board
     public static void main(String[] args) {
-        createAndShowGUI();
+       // createAndShowGUI();
     }
 
 }
