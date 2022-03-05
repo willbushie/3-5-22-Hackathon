@@ -22,7 +22,7 @@ public class chessgame {
         private ArrayList<Pieces> listOfPieces = new ArrayList<Pieces>();
         Pieces[] listp;
 
-        public Player(String side, String color) {
+        public Player(String side, String color) throws FileNotFoundException {
             this.side = side;
             this.color = color;
 
@@ -30,14 +30,18 @@ public class chessgame {
 
 
             //create pieces and add to list
+            
             /*
+            JLabel testLabel = new JLabel();
+
             File myObj = new File("https://github.com/willbushie/3-5-22-Hackathon/blob/main/boardstates.json");
             Scanner myReader = new Scanner(myObj);
             while(myReader.hasNextLine()) {
                 String data = myReader.nextLine();
-                string[] wholeLine = line.Split(':');
-                System.out.println(data);
+                //string[] wholeLine = line.Split(':');
+                testLabel.setText(data);
             */
+            
             }
     }
     
@@ -49,4 +53,5 @@ public class chessgame {
        test.createAndShowGUI();
     }
 }
+
 
