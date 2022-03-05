@@ -19,11 +19,15 @@ public class chessgame {
     public class Player {
         private String side;
         private String color;
-        //private ArrayList<Piece> listOfPieces = new ArrayList<Piece>();
+        private ArrayList<Pieces> listOfPieces = new ArrayList<Pieces>();
+        Pieces[] listp;
 
-        public Player(String side, String color) throws FileNotFoundException {
+        public Player(String side, String color) {
             this.side = side;
             this.color = color;
+
+
+
 
             //create pieces and add to list
             /*
@@ -35,8 +39,8 @@ public class chessgame {
                 System.out.println(data);
             */
             }
-        }
     }
+    
 
     
 
