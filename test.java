@@ -1,6 +1,7 @@
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Font;
 
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
@@ -27,9 +28,21 @@ public class test {
         label.setHorizontalAlignment(JLabel.CENTER);
         label.setVerticalAlignment(JLabel.CENTER);
 
-        JLabel P1Label = new JLabel("P1");
-        P1Label.setText("P1");
-        P1Label.setBounds(15,25,100,50);
+        JLabel p1Counter = new JLabel("P1 Counter");
+        p1Counter.setBorder(border);
+        p1Counter.setBounds(375,375,100,50);
+
+        p1Counter.setText(" 0:00");
+        p1Counter.setHorizontalAlignment(JLabel.CENTER);
+        p1Counter.setVerticalAlignment(JLabel.CENTER);
+
+        JLabel p2Counter = new JLabel("P2 Counter");
+        p2Counter.setBorder(border);
+        p2Counter.setBounds(500, 375, 100, 50);
+
+        p2Counter.setText(" 0:00");
+        p2Counter.setHorizontalAlignment(JLabel.CENTER);
+        p2Counter.setVerticalAlignment(JLabel.CENTER);
 
         String chessPieces [] = {"King", "Queen", "Bishop", "Knight", "Rook", "Pawn"};
         Object pieceMoves [] = {};
@@ -40,14 +53,40 @@ public class test {
         jFrame.add(P1PieceDropdown);
         jFrame.add(P1MoveToDropdown);
         
-        JLabel P2Label = new JLabel("P2");
+        JLabel P1Label = new JLabel("P1");
+        P1Label.setText("P1");
+        P1Label.setBounds(75,0,100,25);
+        P1Label.setFont(new Font("Serif", Font.PLAIN, 24));
+        
+        JLabel piece1 = new JLabel("Piece");
+        piece1.setText("Piece");
+        piece1.setBounds(75,25,100,50);
+        piece1.setFont(new Font("Serif", Font.PLAIN, 24));
+
+        JLabel moveTo1 = new JLabel("Move to");
+        moveTo1.setText("Move to");
+        moveTo1.setBounds(75,100,100,50);
+        moveTo1.setFont(new Font("Serif", Font.PLAIN, 24));
+
+	    JLabel P2Label = new JLabel("P2");
         P2Label.setText("P2");
-        P2Label.setBounds(875,25,100,50);
+        P2Label.setBounds(800,0,100,25);
+        P2Label.setFont(new Font("Serif", Font.PLAIN, 24));
+
+        JLabel piece2 = new JLabel("Piece");
+        piece2.setText("Piece");
+        piece2.setBounds(800,25,100,50);
+        piece2.setFont(new Font("Serif", Font.PLAIN, 24));
+
+        JLabel moveTo2 = new JLabel("Move to");
+        moveTo2.setText("Move to");
+        moveTo2.setBounds(800,100,100,50);
+        moveTo2.setFont(new Font("Serif", Font.PLAIN, 24));
 
         JButton p1Check = new JButton("Check");
         JButton p2Check = new JButton("Check");
-        p1Check.setBounds(75,250,100,50);
-        p2Check.setBounds(800,250,100,50);
+        p1Check.setBounds(75,350,100,50);
+        p2Check.setBounds(800,350,100,50);
 
         JButton Edit = new JButton("Edit");
         JButton Start = new JButton("Start");
@@ -56,9 +95,15 @@ public class test {
         //x, y, h, w 
         JButton p1CM = new JButton("CM");
         JButton p2CM = new JButton("CM");
-        p1CM.setBounds(75, 315, 100, 50);
-        p2CM.setBounds(800, 315, 100, 50);
+        p1CM.setBounds(75, 415, 100, 50);
+        p2CM.setBounds(800, 415, 100, 50);
 
+        jFrame.add(p1Counter);
+        jFrame.add(p2Counter);
+        jFrame.add(moveTo1);
+        jFrame.add(moveTo2);
+        jFrame.add(piece1);
+        jFrame.add(piece2);
         jFrame.add(P1Label);
         jFrame.add(P2Label);
         jFrame.add(Edit);
