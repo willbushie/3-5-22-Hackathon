@@ -43,7 +43,7 @@ public class test {
         JButton Start = new JButton("Start");
         Edit.setBounds(395,500, 80, 50);
         Start.setBounds(495,500, 80, 50);
-
+        //x, y, h, w 
         JButton p1CM = new JButton("CM");
         JButton p2CM = new JButton("CM");
         p1CM.setBounds(75, 315, 100, 50);
@@ -58,6 +58,15 @@ public class test {
         jFrame.add(p1Check);
         jFrame.add(p2Check);
         jFrame.add(label);
+
+        
+        JComboBox P2PeiceDropDown = new JComboBox(chessPieces);
+        JComboBox P2MoveToDropDown = new JComboBox(piecesMoves);
+        P2PeiceDropDown.setBounds(800, 75, 100, 30);
+        P2PeiceDropDown.setBounds(800, 150, 100, 30);
+        jFrame.add(P2PeiceDropDown);
+        jFram.add(P2MoveToDropDown);
+
         jFrame.setVisible(true);
     }
 
