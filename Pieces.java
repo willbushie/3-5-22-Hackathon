@@ -4,7 +4,7 @@ public class Pieces
 {
     public String PieceName;
     public String PiecePosition;
-    public String PieceColor
+    public String PieceColor;
 
     public Pieces(String PieceColor, String PieceName, String PiecePosition)
     {
