@@ -12,7 +12,7 @@ import javax.swing.JComboBox;
 
 public class test {
 
-    private static void createAndShowGUI() {
+    public static void createAndShowGUI() {
         JFrame jFrame = new JFrame("Hello World Swing Example"); // place the image inside of here
         jFrame.setLayout(null);
         jFrame.setSize(1000, 600);
@@ -123,9 +123,5 @@ public class test {
         jFrame.add(P2MoveToDropDown);
 
         jFrame.setVisible(true);
-    }
-
-    public static void main(String[] args) {
-        createAndShowGUI();
     }
 }
