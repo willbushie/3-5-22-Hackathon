@@ -71,11 +71,11 @@ public class test {
 
         
         JComboBox P2PeiceDropDown = new JComboBox(chessPieces);
-        JComboBox P2MoveToDropDown = new JComboBox(piecesMoves);
+        JComboBox P2MoveToDropDown = new JComboBox(pieceMoves);
         P2PeiceDropDown.setBounds(800, 75, 100, 30);
-        P2PeiceDropDown.setBounds(800, 150, 100, 30);
+        P2MoveToDropDown.setBounds(800, 150, 100, 30);
         jFrame.add(P2PeiceDropDown);
-        jFram.add(P2MoveToDropDown);
+        jFrame.add(P2MoveToDropDown);
 
         jFrame.setVisible(true);
     }
