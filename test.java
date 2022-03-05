@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.border.Border;
+import javax.swing.JComboBox;
 
 public class test {
 
@@ -29,6 +30,15 @@ public class test {
         JLabel P1Label = new JLabel("P1");
         P1Label.setText("P1");
         P1Label.setBounds(15,25,100,50);
+
+        String chessPieces [] = {"King", "Queen", "Bishop", "Knight", "Rook", "Pawn"};
+        Object pieceMoves [] = {};
+        JComboBox P1PieceDropdown = new JComboBox(chessPieces);
+        JComboBox P1MoveToDropdown = new JComboBox(pieceMoves);
+        P1PieceDropdown.setBounds(75,75,100,30);
+        P1MoveToDropdown.setBounds(75,150,100,30);
+        jFrame.add(P1PieceDropdown);
+        jFrame.add(P1MoveToDropdown);
         
         JLabel P2Label = new JLabel("P2");
         P2Label.setText("P2");
