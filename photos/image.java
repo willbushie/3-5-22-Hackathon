@@ -1,40 +1,54 @@
 // image class
-package photos;
 import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
+
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.lang.reflect.Array;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
+
 import javax.imageio.ImageIO;
 import java.awt.Graphics;
+import java.util.Dictionary;
+
+import netscape.javascript.JSObject;
 
 
 public class image
 {
     // initialize image (randomly chose images and record them)
-    public image(ArrayList chessPieces)
+    public image()
     {
-        // read in the board state array
-
+        // locations of the necessary files
+        String blankBoard = "/photos/empty-board.png";
+        String whitePawn = "/photos/white-pawn.png";
+        String whiteRook = "/photos/white-rook.png";
+        String whiteKnight = "/photos/white-knight.png";
+        String whiteBishop = "/photos/white-bishop.png";
+        String whiteQueen = "/photos/white-queen.png";
+        String whiteKing = "/photos/white-king.png";
+        String blackPawn = "/photos/black-pawn.png";
+        String blackRook = "/photos/black-rook.png";
+        String blackKnight = "/photos/black-knight.png";
+        String blackBishop = "/photos/black-bishop.png";
+        String blackQueen = "/photos/black-queen.png";
+        String blackKing = "/photos/black-king.png";
     }
 
-    // print the image attribute values
-    public void printAttributes()
+    // obtain the current board state
+    public void getBoardState()
     {
-        System.out.println("Passed ID: "+id);
-        System.out.println("Complete ID: "+completeID);
-        System.out.println("Background #: "+background);
-        System.out.println("Background Title: "+backgroundTitle);
-        System.out.println("Clocktower #: "+clocktower);
-        System.out.println("Clocktower Title: "+clocktowerTitle);
-        System.out.println("Face #: "+face);
-        System.out.println("Face Title: "+faceTitle);
-    }
-
-    // check if this sequence has been created before (prevent repeats)
-    public boolean unique(int background, int clocktower, int face)
-    {
-        return true;
+        // read the board state from boardstates.json
+        FileReader fstream = new FileReader("boardstates.json");
+        Scanner inFile = new Scanner(fstream);
+        String line;
+        
     }
 
     // create combined image and store it
@@ -56,7 +70,11 @@ public class image
         a.drawImage(clocktowerImage, 0, 0, null);
         a.drawImage(faceImage, 0, 0, null);
         // write finalImage to file (final folder)
-        ImageIO.write(finalImage,"png",new File("/2022-3-5-Hackathon/photos/"+completeID+".png"));
-        System.out.println("Image "+completeID+" created successfully.");
+        ImageIO.write(finalImage,"png",new File("/2022-3-5-Hackathon/photos/currentState.png"));
+        //System.out.println("Board state created successfully.");
+    }
+
+    public static void main(String[] args) {
+        getBoardState();
     }
 }

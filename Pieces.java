@@ -4,9 +4,11 @@ public class Pieces
 {
     public String PieceName;
     public String PiecePosition;
+    public String PieceColor
 
-    public Pieces(String PieceName, String PiecePosition)
+    public Pieces(String PieceColor, String PieceName, String PiecePosition)
     {
+        this.PieceColor = PieceColor;
         this.PieceName = PieceName;
         this.PiecePosition = PiecePosition;
     }
@@ -18,6 +20,10 @@ public class Pieces
     {
         return this.PiecePosition;
     } 
+    public String getPieceColor()
+    {
+        return this.PieceColor;
+    }
 
 
     /*FileInputStream json = new FileInputStream("boardstates.json");
