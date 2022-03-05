@@ -1,6 +1,5 @@
 // driver class (interact with program through this file)
 import photos.image;
-//import json.jsonInteraction;
 import java.io.IOError;
 import java.io.IOException;
 import javax.swing.plaf.TreeUI;
@@ -36,16 +35,6 @@ public class imagedriver {
     // main method
     public static void main(String[] args) throws IOException
     {
-        // user interaction
-        String userInput = "notend";
-        int menu = 0;
-        System.out.println("Welcome to the program!");
-        /*while (programEnd(userInput, menu) == false)
-        {
-            printMenus(menu);
-            
-        }
-        // end program message*/
         createImages(10);
         System.out.println("Program Ended Successfully");
     }
