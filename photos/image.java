@@ -3,6 +3,7 @@ package photos;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Random;
 import javax.imageio.ImageIO;
 import java.awt.Graphics;
@@ -10,52 +11,11 @@ import java.awt.Graphics;
 
 public class image
 {
-    // class attributes
-    String id; // passed from the user (program)
-    String completeID; // used to name the image
-    int background; // used to pick the images
-    String backgroundTitle; // used to store in the json
-    int clocktower; // used to pick the images
-    String clocktowerTitle; // used to store in the json
-    int face; // used to pick the images
-    String faceTitle; // used to store in the json
-
     // initialize image (randomly chose images and record them)
-    public image(Integer passedID)
+    public image(ArrayList chessPieces)
     {
-        // get id, background, clocktower, face numbers (starting at 0, to max)
-        id = Integer.toString(passedID);
-        completeID = getImageIDString();
-        background = getNumber(3);
-        // grab the background title
-        clocktower = getNumber(3);
-        // grab the clocktower title
-        face = getNumber(3);
-        // grab the face title
-        // ensure the sequence is unique
-        while (unique(background,clocktower,face) == false)
-        {
-            // repeat the randomized process until the combination is unqiue
-        }
-    }
+        // read in the board state array
 
-    // append "0"s to the begining of the id based on the length of the id passed
-    public String getImageIDString()
-    {
-        String returnStr = "";
-        for (int zeros = id.length(); zeros<4; zeros++)
-        {
-            returnStr += "0";
-        }
-        returnStr = returnStr + id;
-        return returnStr;
-    }
-
-    // get random number when passed the max
-    public int getNumber(int max)
-    {
-        Random randInt = new Random();
-        return randInt.nextInt(max);
     }
 
     // print the image attribute values

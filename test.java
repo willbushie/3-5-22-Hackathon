@@ -11,7 +11,7 @@ import javax.swing.border.Border;
 public class test {
 
     private static void createAndShowGUI() {
-        JFrame jFrame = new JFrame("Hello World Swing Example");
+        JFrame jFrame = new JFrame("Hello World Swing Example"); // place the image inside of here
         jFrame.setLayout(null);
         jFrame.setSize(1000, 600);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
